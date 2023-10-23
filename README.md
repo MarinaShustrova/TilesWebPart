@@ -1,26 +1,34 @@
-## menu
+## TilesWebPart
 
-This is where you include your WebPart documentation.
+Данный репозиторий представляет собой веб-часть, разработанную для сайта SharePoint, предназначенную для настройки меню сайта SharePoint. Этот README файл содержит информацию о том, как настроить и использовать данную веб-часть.
 
-### Building the code
+### Установка и сборка проекта
 
 ```bash
-git clone the repo
-npm i
-npm i -g gulp
-gulp
+1. Клонируйте репозиторий: 
+git clone https://github.com/MarinaShustrova/TilesWebPart.git
+2. Установите зависимости:
+Перейдите в каталог проекта и выполните команду для установки зависимостей:
+cd TilesWebPart
+npm install
 ```
+
+### Сборка проекта 
+ Выполните следующие команды для сборки проекта:
+npm i -g gulp (установка Gulp, если он еще не установлен)
+gulp (запуск сборки проекта)
 
 This package produces the following:
 
 * lib/* - intermediate-stage commonjs build artifacts
 * dist/* - the bundled script, along with other resources
-* deploy/* - all resources which should be uploaded to a CDN.
+* deploy/* - all resources which should be uploaded to a CD
 
-### Build options
+### Варианты сборки 
+* gulp clean - очистка проекта
+* gulp test - запуск тестов 
+* gulp serve - запуск локального сервера 
+* gulp bundle --ship - создание бандла для продакшена 
+* gulp package-solution --ship - создание пакета решения для разворачивания на сервере SharePoint 
 
-gulp clean - TODO
-gulp test - TODO
-gulp serve - TODO
-gulp bundle - TODO
-gulp package-solution - TODO
+
