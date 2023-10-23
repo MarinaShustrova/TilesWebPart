@@ -1,0 +1,11 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "isCreatingSolution": true,
+    "environment": "onprem19",
+    "version": "1.10.0",
+    "libraryName": "menu",
+    "libraryId": "c30fd819-a221-44f2-9e0a-9f4452c6256b",
+    "packageManager": "npm",
+    "componentType": "webpart"
+  }
+}

@@ -1,0 +1,357 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+.menu {
+  display: flex;
+  align-items: center;
+  background-color: $ms-color-themePrimary;
+  height: fit-content;
+  flex-direction: row;
+  width: auto; /* Горизонтальная ориентация по умолчанию */
+}
+
+.menuVertical {
+  display: flex;
+  flex-direction: column; /* Вертикальная ориентация */
+  background-color: $ms-color-themePrimary;
+  align-items: center;
+  width:fit-content;
+  height: auto;
+  align-items: center;
+}
+
+a {
+  margin-top: 10px;
+  background-color: $ms-color-themePrimary;
+  text-decoration: none;
+  color:$ms-color-themePrimary;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+  flex-direction: column;
+}
+
+a:hover {
+  text-decoration: none;
+  background-color: $ms-color-themePrimary;
+  width: 100px;
+}
+
+a:focus {
+  text-decoration: none;
+  background-color: $ms-color-themePrimary;
+  width: 100px;
+
+}
+
+.subMenuLink {
+  text-decoration: none;
+  color: inherit;
+  color: $ms-color-themePrimary;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  color: $ms-color-white;
+  background-color: $ms-color-themePrimary;
+}
+
+.subMenuLink:hover {
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  font-size: 13px;
+  color: $ms-color-white;
+}
+
+.menuLink {
+  position: relative;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+  color:  $ms-color-white;
+  flex-direction: row;
+  width: 100px;
+  height: 100px;
+
+}
+
+.menuLinkVertical {
+  position:relative;
+  text-decoration: none;
+  color: inherit;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+  color: $ms-color-white;
+  text-decoration: none;
+  margin-left: 5px;
+  flex-direction: row;
+}
+
+
+.logo img {
+  width: 60px;
+  height: 80%;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  // border-radius: 50px;
+  animation: rotate 10s infinite linear;
+
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.header {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Добавлено свойство для центрирования по горизонтали */
+  color: $ms-color-white;
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+
+.title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  color:$ms-color-white;;
+}
+
+.menuItemsHorizontal { /* пункты меню*/
+  text-decoration: none;
+  background-color: $ms-color-themePrimary;
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: row; /* horizontal position*/
+}
+
+.menuItemsVertical {
+  text-decoration: none;
+  list-style-type: none;
+  background-color: $ms-color-themePrimary;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: column; /*vertical position */
+
+}
+
+.menuItem {
+  background-color: $ms-color-themePrimary;
+  text-decoration: none;
+  margin-right: 10px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuItemVertical {
+  background-color: $ms-color-themePrimary;
+  text-decoration: none;
+  margin-bottom: 20px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.subMenu {
+  // background-color: $ms-color-themePrimary;
+  background-color: inherit;
+  overflow: hidden;
+  text-decoration: none;
+  display: none;
+  position: absolute;
+  border: 1px solid rgb(141, 141, 198);
+  padding: 10px;
+  z-index: 30;
+  left: 30%;
+  top: 100%;
+  width: 200px;
+  height: auto;
+  border-radius: 1px;
+  animation: fade-in 0.3s ease-in-out;
+}
+
+.subMenu.visible {
+  display: block;
+}
+
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-70px); /* Начальное положение */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Конечное положение */
+  }
+}
+
+.menuLink:hover .subMenu {
+  display: block; /* Отображение подпунктов при наведении на пункт меню */
+}
+
+.subMenuLink:hover {
+  // background-color: #f5f5f5; /* Подсветка подпунктов при наведении */
+  border-radius: 5px; /* Скругление краев подпунктов при наведении */
+}
+
+.subMenuVertical {
+    // background-color: $ms-color-themePrimary;
+    background-color: inherit;
+    overflow: hidden;
+    text-decoration: none;
+    display: none;
+    position: absolute;
+    border: 1px solid rgb(141, 141, 198);
+    padding: 10px;
+    z-index: 10;
+    left: 30%;
+    top: 100%;
+    width: 200px;
+    height: auto;
+    border-radius: 1px;
+    animation: fade-in 0.3s ease-in-out;
+
+}
+
+.menuItem:hover .subMenu,
+.menuItemVertical:hover .subMenuVertical {
+  display: block;
+}
+
+.subMenuItem {
+  margin-top: 5px;
+}
+
+.subMenuItemVertical {
+  margin-top: 5px;
+}
+
+.noSubMenu::after {
+  display: none;
+}
+
+.subMenuToggle {
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px;
+  border-color: transparent transparent transparent transparent;
+    pointer-events: none;
+}
+
+.subMenuToggle.expanded {
+  border-color: transparent transparent transparent #000;
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+
+.subSubMenuItemIconUrl{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 3px;
+
+}
+
+
+
+.menuItemIconUrl {
+width: 25px;
+height: 25px;
+border-radius: 50%;
+margin-right: 3px;
+align-items: center;
+margin-top: 10px;
+}
+
+.subMenuItemIconUrl {
+  width: 20px;
+  height: 20x;
+  border-radius: 50%;
+  margin-right: 3px;
+}
+
+.subSubMenu {
+  width: auto;
+  height: auto;
+}
+
+.subMenuLink {
+  width: auto;
+  height: auto;
+}
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+  .menu {
+  flex-direction: column;
+  height: auto;
+  flex-wrap: wrap;
+  }
+ }
+
+
+ @media (max-width: 480px) {
+  .menu {
+  flex-direction: column;
+  height: auto;
+  flex-wrap: wrap;
+  }
+ }
+
+ @media (max-width: 360px) {
+  .menu {
+  flex-direction: column;
+  height: auto;
+  }
+ }
+
+ @media (max-width: 320px) {
+  .menu{
+  flex-direction: column;
+  height: auto;
+  flex-wrap: wrap;
+  }
+ }
+
+ @media (max-width: 280px) {
+  .menu {
+  flex-direction: column;
+  height: auto;
+  flex-wrap: wrap;
+  }
+ }
+
